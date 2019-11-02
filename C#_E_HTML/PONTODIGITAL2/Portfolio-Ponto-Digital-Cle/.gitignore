@@ -1,0 +1,8 @@
+/.metadata
+/.recomenders/
+/RemoteSystemsTempFiles
+/.settings
+bin/
+obj/
+.DS_Store
+/.vscode

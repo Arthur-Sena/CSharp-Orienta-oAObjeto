@@ -1,0 +1,15 @@
+form{
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 1px 1px 5px #ccc;
+    padding: 3em 2em;
+    margin-top: 3em;
+}
+form h1{
+    text-align: center;
+}
+body {
+    background-image: url(/wwwroot/img/images.jfif);
+    text-align: center;
+    height: 100%;
+}

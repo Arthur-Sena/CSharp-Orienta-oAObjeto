@@ -1,0 +1,27 @@
+@using TSUKAR_Estacionamento.Models;
+@{
+    Layout = "MasterPage";
+    ViewBag.Title = "Editar Usuario";
+    ClienteModel cliente = ViewBag.clientes;
+}
+<div class = "container">
+    <form action="/Usuario/Editar" method="POST">
+    <h1>Edite seus dados</h1>
+        <div class="form-group">
+            <input type="hidden" value="@cliente.Id" name="id">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" value="@cliente.Nome" class="form-control">
+            
+            <label for="modelo">Modelo:</label>
+            <input type="text" name="email" value="@cliente.Modelo" class="form-control">
+            
+            <label for="marca">Marca:</label>
+            <input type="password" name="marca" value ="@cliente.Marca" class="form-control">
+            
+            <label for="placa">Placa:</label>
+            <input type="date" name="placa" value="@cliente.Placa" class="form-control">
+            <br>
+            <input type="submit" value="Editar" class="btn btn-secondary btn-lg btn-block">
+        </div>
+    </form>
+</div>

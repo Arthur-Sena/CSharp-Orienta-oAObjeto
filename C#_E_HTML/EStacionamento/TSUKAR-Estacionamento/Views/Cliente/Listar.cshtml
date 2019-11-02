@@ -1,0 +1,40 @@
+@using TSUKAR_Estacionamento.Models;
+@{
+    Layout = "MasterPage";
+    ViewBag.Title = "Lista de Usuario";
+}
+
+<div class="container">
+    <br>
+    <h2>@TempData["mensagem"]</h2>
+    <table class="table table-striped">
+        <thead class = "thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Modelo</th>
+                <th>Marca</th>
+                <th>Placa</th>
+                <th>Data de Entrada</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in ViewData["cliente"] as List<ClienteModel>)
+                {
+                    <tr>
+                        <td><strong>@item.Id</strong></td>
+                        <td>@item.Nome</td>
+                        <td>@item.Modelo</td>
+                        <td>@item.Marca</td>
+                        <td>@item.Placa</td>
+                        <td>@item.DataEntrada</td>
+                        <td>
+                            <a href = "/Cliente/Editar?id=@item.Id" class="btn btn-warning">Editar</a>
+                            <a href = "#" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+</div>

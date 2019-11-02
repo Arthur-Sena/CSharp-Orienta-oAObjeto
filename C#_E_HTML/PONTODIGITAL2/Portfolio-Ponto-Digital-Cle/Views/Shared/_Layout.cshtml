@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ponto Digital</title>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+    @switch ((string)ViewData["ViewName"])
+    {
+        case "Home":
+        <link rel = "stylesheet" href="~/css/styleHome.css" type="text/css">
+        break;
+
+        case "Avaliacao":
+        <link rel = "stylesheet" href="~/css/styleAvaliacao.css" type="text/css">
+        break;
+
+        case "Cadastro":
+        <link rel = "stylesheet" href="~/css/styleCadastro.css" type="text/css">
+        break;
+
+        case "ComoUsar":
+        <link rel = "stylesheet" href="~/css/styleComoUsar.css" type="text/css">
+        break;
+
+        case "Contribuicao":
+        <link rel = "stylesheet" href="~/css/styleContribuicao.css" type="text/css">
+        break;
+
+        case "QuemSomos":
+        <link rel = "stylesheet" href="~/css/styleQuemSomos.css" type="text/css">
+        break;   
+
+        case "Administrador":
+        <link rel = "stylesheet" href="~/css/styleAdministrador.css" type="text/css">
+        break;   
+
+        case "Cliente":
+        <link rel = "stylesheet" href="~/css/styleCliente.css" type="text/css">
+        break; 
+    }
+
+</head>
+
+<body class="flex-container">
+
+    @RenderBody()
+    <footer>
+        <div class="local">
+            <a href="https://goo.gl/maps/m7Ku7LqrwsA2" target="_blank">
+                <img src="imagens/localgoogle.png" alt="Ícone vermelho de lugar.">
+            </a>
+        </div>
+        <address>Alameda Barão de Limeira 539 <br> Jd. Boa Vista São Paulo SP</address>
+        <div class="iconesredes">
+            <a href="https://www.facebook.com/pontomaisweb/" target="_blank"><img src="imagens/facebook-icone-icon-4.png"
+                    alt="Ícone Facebook"></a>
+            <a href="https://twitter.com/appolicious" target="_blank"><img src="imagens/square-twitter-512.png" alt="Ícone Twiter"></a>
+            <a href="https://www.instagram.com/pontomaisweb/?hl=pt-br" target="_blank"><img src="imagens/icinstagram.jpg"
+                    alt="Ícone Instagram"></a>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
